@@ -1,13 +1,13 @@
 package com.myprojectaanuj.demo.configs;
 
-import com.myprojectaanuj.demo.services.PaymentService;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AppConfig {
+public class MapperConfig {
     @Bean
-    PaymentService paymentService(){
-        return new PaymentService();
+    public ModelMapper getModelMapper(){
+        return new ModelMapper();
     }
 }
